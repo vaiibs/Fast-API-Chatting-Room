@@ -44,3 +44,6 @@ async def websocket_endpoint(websocket: WebSocket, username: str):
                         await client.send_json({"type": "typing", "text": f"{username} is typing..."})
     except WebSocketDisconnect:
         connected_users.pop(websocket, None)
+    
+    finally:
+        pass
